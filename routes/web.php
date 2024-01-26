@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\admins\DashboardController;
 use App\Http\Controllers\guests\AboutUsController;
 use App\Http\Controllers\guests\FacilityController;
 use App\Http\Controllers\guests\HomeController;
@@ -49,5 +50,11 @@ Route::controller(PublicServiceController::class)->group(
         Route::get('/layanan-umum', 'index')->name('guest-public-service-index');
         Route::get('/layanan-umum/id', 'show')->name('guest-public-service-show');
 
+    }
+);
+
+Route::controller(DashboardController::class)->group(
+    function() {
+        Route::get('/dashboard', 'index')->name('dashboard');
     }
 );

@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\User;
 use Illuminate\Foundation\Inspiring;
 use Illuminate\Support\Facades\Artisan;
 
@@ -15,5 +16,6 @@ use Illuminate\Support\Facades\Artisan;
 */
 
 Artisan::command('inspire', function () {
-    $this->comment(Inspiring::quote());
+    $user = User::factory()->create();
+    print($user->email);
 })->purpose('Display an inspiring quote');

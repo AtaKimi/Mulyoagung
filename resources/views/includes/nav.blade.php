@@ -35,7 +35,7 @@
                                 <a href="{{route('guest-public-service-index')}}">Layanan
                                     Umum</a>
                             </li>
-                            <li><a href="category.html">Login</a></li>
+                            <li><a href="{{route('login')}}">Login</a></li>
 
 
                             {{-- <li class="has-children">
