@@ -12,21 +12,23 @@
         <div class="menu-bg-wrap">
             <div class="site-navigation">
                 <div class="row g-0 align-items-center">
-                    <div class="col-2">
-                        <a href="index.html" class="logo m-0 float-start"><img src="{{asset('assets/images/logo.png')}}" alt="" srcset="" style="width: 48px; height:48px;"></a>
+                    <div class="col-3 d-flex align-items-center gap-2">
+                        <a href="index.html" class="logo m-0 float-start"><img
+                                src="{{ asset('assets/images/logo.png') }}" alt="" srcset=""
+                                style="width: 56px; height:56px;"></a>
+                        <div class="text-light">
+                            <p class="mb-0" style="font-weight: 600">Desa Mulyoagung</p>
+                            <p class="mb-0">Kabupaten Malang</p>
+                        </div>
                     </div>
-                    <div class="col-8 text-center">
-                        <form action="#" class="search-form d-inline-block d-lg-none">
-                            <input type="text" class="form-control" placeholder="Search...">
-                            <span class="bi-search"></span>
-                        </form>
-
+                    <div class="col-7 text-center">
                         <ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu mx-auto">
                             <li class="active"><a href="index.html">Beranda</a></li>
                             <li><a href="category.html">Tentang Kami</a></li>
                             <li><a href="category.html">Berita</a></li>
                             <li><a href="category.html">Fasilitas</a></li>
                             <li><a href="category.html">Layanan Umum</a></li>
+                            <li><a href="category.html">Login</a></li>
 
 
                             {{-- <li class="has-children">
@@ -53,7 +55,10 @@
                         </ul>
                     </div>
                     <div class="col-2 text-end text-light">
-                        <button type="button" class="btn btn-outline-light btn-sm py-2">Login</button>
+                        <a href="#"
+                            class="burger ms-auto float-end site-menu-toggle js-menu-toggle d-inline-block d-lg-none light">
+                            <span></span>
+                        </a>
                     </div>
                 </div>
             </div>
