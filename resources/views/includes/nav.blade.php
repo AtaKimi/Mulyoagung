@@ -23,11 +23,18 @@
                     </div>
                     <div class="col-7 text-center">
                         <ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu mx-auto">
-                            <li class="active"><a href="index.html">Beranda</a></li>
-                            <li><a href="category.html">Tentang Kami</a></li>
-                            <li><a href="category.html">Berita</a></li>
-                            <li><a href="category.html">Fasilitas</a></li>
-                            <li><a href="category.html">Layanan Umum</a></li>
+                            <li @if (request()->routeIs('home')) class="active" @endif><a
+                                    href="{{ route('home') }}">Beranda</a></li>
+                            <li @if (request()->routeIs('about-us')) class="active" @endif><a
+                                    href="{{ route('about-us') }}">Tentang Kami</a></li>
+                            <li @if (request()->routeIs('guest-news-index')) class="active" @endif><a
+                                    href="{{ route('guest-news-index') }}">Berita</a></li>
+                            <li @if (request()->routeIs('guest-facility-index')) class="active" @endif><a
+                                    href="{{ route('guest-facility-index') }}">Fasilitas</a></li>
+                            <li @if (request()->routeIs('guest-public-service-index')) class="active" @endif>
+                                <a href="{{route('guest-public-service-index')}}">Layanan
+                                    Umum</a>
+                            </li>
                             <li><a href="category.html">Login</a></li>
 
 

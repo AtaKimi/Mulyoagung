@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/glightbox.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
     <link rel="stylesheet" href="{{ asset('assets/css/flatpickr.min.css') }}">
     <title>Mulyoagung</title>
 </head>

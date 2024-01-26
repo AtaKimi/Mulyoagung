@@ -61,19 +61,6 @@
                             <p class="text-break">desa.mulyoagung.dau.malang@gmail.com</p>
                         </div>
                     </div>
-                    {{-- <ul class="list-unstyled float-start">
-                        <li>
-                            <span class="col-lg-4">Alamat</span>
-                            <span class="col-lg-8">Jl. Raya Mulyoagung 143 Mulyoagung Kecamatan Dau.
-                                Kode Pos 65151</span>
-                        </li>
-                        <li>Nomor Telpon</li>
-                        <li>Email</li>
-                    </ul>
-                    <ul class="list-unstyled float-start">
-                        <li>0341-462383</li>
-                        <li>desa.mulyoagung.dau.malang@gmail.com</li>
-                    </ul> --}}
                 </div> <!-- /.widget -->
             </div> <!-- /.col-lg-4 -->
             <div class="col-lg-4">
