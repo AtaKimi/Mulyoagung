@@ -83,7 +83,7 @@
                 <p class="text-light">Pembangunan Desa</p>
             </div>
         </div>
-        <div class="col-sm-5 col-md-4 col-lg-3 card border-0 bg-primary">
+        {{-- <div class="col-sm-5 col-md-4 col-lg-3 card border-0 bg-primary">
             <div class="card-body text-center fw-bold fs-5">
                 <div class="p-3 row justify-content-center">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"  class="d-none d-lg-block col-md-5"
@@ -94,7 +94,7 @@
                 </div>
                 <p class="text-light">Pembangunan Desa</p>
             </div>
-        </div>
+        </div> --}}
     </div>
     {{-- ---------------------------- Services End ------------------------------------ --}}
 
