@@ -56,6 +56,62 @@ return [
             'throw' => false,
         ],
 
+        'village_logo' => [
+            'driver' => 'local',
+            'root'   => public_path('media/village_logo'),
+            'url'    => env('APP_URL') . '/media/village_logo',
+        ],
+
+        'about_us_banner' => [
+            'driver' => 'local',
+            'root'   => public_path('media/about_us_banner'),
+            'url'    => env('APP_URL') . '/media/about_us_banner',
+        ],
+
+        'news_front_image' => [
+            'driver' => 'local',
+            'root'   => public_path('media/news_front_image'),
+            'url'    => env('APP_URL') . '/media/news_front_image',
+        ],
+
+        'facility_front_image' => [
+            'driver' => 'local',
+            'root'   => public_path('media/facility_front_image'),
+            'url'    => env('APP_URL') . '/media/facility_front_image',
+        ],
+        
+        'public_service_front_image' => [
+            'driver' => 'local',
+            'root'   => public_path('media/public_service_front_image'),
+            'url'    => env('APP_URL') . '/media/public_service_front_image',
+        ],
+
+        'public_service_file' => [
+            'driver' => 'local',
+            'root'   => public_path('media/public_service_file'),
+            'url'    => env('APP_URL') . '/media/public_service_file',
+        ],
+
+        'social_media_logo' => [
+            'driver' => 'local',
+            'root'   => public_path('media/social_media_logo'),
+            'url'    => env('APP_URL') . '/media/social_media_logo',
+        ],
+
+        'user_photo_profile' => [
+            'driver' => 'local',
+            'root'   => public_path('media/user_photo_profile'),
+            'url'    => env('APP_URL') . '/media/user_photo_profile',
+        ],
+
+        'home_page_carausel_image' => [
+            'driver' => 'local',
+            'root'   => public_path('media/home_page_carausel_image'),
+            'url'    => env('APP_URL') . '/media/home_page_carausel_image',
+        ],
+
+
+        
     ],
 
     /*

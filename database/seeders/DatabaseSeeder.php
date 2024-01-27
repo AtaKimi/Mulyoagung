@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(
             [
+                //normal seeder
                 RoleSeeder::class,
                 AdminSeeder::class,
                 UserSeeder::class,
@@ -27,7 +28,18 @@ class DatabaseSeeder extends Seeder
                 PublicServiceSeeder::class,
                 SocialMediaSeeder::class,
                 CommentSeeder::class,
-            ]
+
+                //media seeder
+                VillageLogoSeeder::class,
+                AboutUsBannerSeeder::class,
+                NewsFrontImageSeeder::class,
+                FacilityFrontImageSeeder::class,
+                PublicServiceFrontImageSeeder::class,
+                PublicServiceFileSeeder::class,
+                SocialMediaLogoSeeder::class,
+                UserPhotoProfileSeeder::class,
+                HomePageCarauselSeeder::class,
+                ]
         );
     }
 }
