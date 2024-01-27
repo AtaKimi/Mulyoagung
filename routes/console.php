@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\User;
+use Spatie\Permission\Models\Role;
 use Illuminate\Foundation\Inspiring;
 use Illuminate\Support\Facades\Artisan;
 
@@ -16,6 +17,7 @@ use Illuminate\Support\Facades\Artisan;
 */
 
 Artisan::command('inspire', function () {
-    $user = User::factory()->create();
-    print($user->email);
+    $admin_role = Role::create(['name' => 'admin']);
+    $role = Role::where('name', '=', 'admin')->get();
+    dd($role);
 })->purpose('Display an inspiring quote');
