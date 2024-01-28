@@ -14,20 +14,19 @@
 
             <div class="row posts-entry">
                 <div class="col-lg-8">
-                    @for ($i = 0; $i < 5; $i++)
+                    @foreach ($news as $new)
                         <div class="blog-entry d-flex blog-entry-search-item">
-                            <a href="{{route('guest-news-show')}}" class="img-link me-4">
+                            <a href="{{route('guest-news-show',['id' => $new->id])}}" class="img-link me-4">
                                 <img src="{{ asset('assets/images/img_1_sq.jpg') }}" alt="Image" class="img-fluid">
                             </a>
                             <div>
-                                <span class="date">Apr. 14th, 2022 &bullet; <a href="#">Business</a></span>
-                                <h2><a href="{{route('guest-news-show')}}">Thought you loved Python? Wait until you meet Rust</a></h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, nobis ea quis
-                                    inventore vel voluptas.</p>
-                                <p><a href="{{route('guest-news-show')}}" class="btn btn-sm btn-outline-primary">Read More</a></p>
+                                <span class="date">Apr. 15th, 2022 &bullet; <a href="#">Business</a></span>
+                                <h2><a href="{{route('guest-news-show',['id' => $new->id])}}">{{$new->title}}</a></h2>
+                                <p>{{$new->subtitle}}</p>
+                                <p><a href="{{route('guest-news-show',['id' => $new->id])}}" class="btn btn-sm btn-outline-primary">Read More</a></p>
                             </div>
                         </div>
-                    @endfor
+                    @endforeach
 
                     <div class="row text-start pt-5 border-top">
                         <div class="col-md-12">
@@ -52,7 +51,7 @@
                             <ul>
                                 @for ($i = 0; $i < 3; $i++)
                                     <li>
-                                        <a href="{{route('guest-news-show')}}">
+                                        <a href="#">
                                             <img src="{{ asset('assets/images/img_1_sq.jpg') }}" alt="Image placeholder"
                                                 class="me-4 rounded">
                                             <div class="text">
