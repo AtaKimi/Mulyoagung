@@ -11,8 +11,22 @@
 </head>
 
 <body>
-
-    {{ $slot }}
+    <!--  Body Wrapper -->
+    <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+        data-sidebar-position="fixed" data-header-position="fixed">
+        <!-- Sidebar Start -->
+        @include('includes.admin.sidebar')
+        <!--  Sidebar End -->
+        <!--  Main wrapper -->
+        <div class="body-wrapper">
+            <!--  Header Start -->
+            @include('includes.admin.navbar')
+            <!--  Header End -->
+            <div class="container-fluid">
+                {{ $slot }}
+            </div>
+        </div>
+    </div>
 
     <script src="{{ asset('assets/libs/jquery/dist/jquery.min.js') }}"></script>
     <script src="{{ asset('assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
