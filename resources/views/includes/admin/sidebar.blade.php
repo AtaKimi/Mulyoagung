@@ -29,7 +29,7 @@
                     </li>
                     <li class="nav-small-cap">
                         <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-                        <span class="hide-menu">Management</span>
+                        <span class="hide-menu">Manajemen</span>
                     </li>
                     <li class="sidebar-item">
                         <a class="sidebar-link" href="{{ route('admin-user-index') }}" aria-expanded="false">
@@ -48,14 +48,14 @@
                     </li>
                     <li class="nav-small-cap">
                         <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-                        <span class="hide-menu">Pages</span>
+                        <span class="hide-menu">Halaman</span>
                     </li>
                     <li class="sidebar-item">
                         <a class="sidebar-link" href="{{ route('admin-about-us-index') }}" aria-expanded="false">
                             <span>
                                 <i class="ti ti-article"></i>
                             </span>
-                            <span class="hide-menu">About Us</span>
+                            <span class="hide-menu">Tentang Kami</span>
                         </a>
                     </li>
                     <li class="sidebar-item">
@@ -67,7 +67,7 @@
                                     <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
                                     <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
                                 </svg> </span>
-                            <span class="hide-menu">News</span>
+                            <span class="hide-menu">Berita</span>
                         </a>
                     </li>
                     <li class="sidebar-item">
@@ -80,7 +80,7 @@
                                     <line x1="8" y1="2" x2="8" y2="18"></line>
                                     <line x1="16" y1="6" x2="16" y2="22"></line>
                                 </svg> </span>
-                            <span class="hide-menu">Facility</span>
+                            <span class="hide-menu">Fasilitas</span>
                         </a>
                     </li>
                     <li class="sidebar-item">
@@ -93,12 +93,12 @@
                                     </rect>
                                     <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
                                 </svg> </span>
-                            <span class="hide-menu">Public Service</span>
+                            <span class="hide-menu">Layanan Publik</span>
                         </a>
                     </li>
                     <li class="nav-small-cap">
                         <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-                        <span class="hide-menu">Settings</span>
+                        <span class="hide-menu">Pengaturan</span>
                     </li>
                     <li class="sidebar-item">
                         <a class="sidebar-link" href="{{ route('admin-setting-village') }}" aria-expanded="false">
@@ -109,7 +109,7 @@
                                     <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
                                     <polyline points="9 22 9 12 15 12 15 22"></polyline>
                                 </svg> </span>
-                            <span class="hide-menu">Village</span>
+                            <span class="hide-menu">Desa</span>
                         </a>
                     </li>
                     <li class="sidebar-item">
@@ -122,7 +122,7 @@
                                     <circle cx="12" cy="7" r="4"></circle>
                                 </svg>
                             </span>
-                            <span class="hide-menu">Profile</span>
+                            <span class="hide-menu">Profil</span>
                         </a>
                     </li>
                 @else

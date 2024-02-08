@@ -25,7 +25,7 @@
 <x-admin>
     <div class="card">
         <div class="card-body">
-            <h4 class="mb-4">About us</h4>
+            <h4 class="mb-4">Tentang Kami</h4>
             <form action="{{ route('admin-about-us-update') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
