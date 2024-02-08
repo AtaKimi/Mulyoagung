@@ -14,7 +14,7 @@
                 <div class="row g-0 align-items-center">
                     <div class="col-3 d-flex align-items-center gap-2">
                         <a href="index.html" class="logo m-0 float-start"><img
-                                src="{{ asset('assets/images/logo.png') }}" alt="" srcset=""
+                                src="{{ App\Models\Village::get()->first()->getFirstMediaUrl('default') }}" alt="" srcset=""
                                 style="width: 56px; height:56px;"></a>
                         <div class="text-light">
                             <p class="mb-0" style="font-weight: 600">Desa Mulyoagung</p>
