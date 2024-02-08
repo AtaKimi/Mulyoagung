@@ -4,8 +4,6 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
-use App\Models\PublicService;
-use App\Models\SocialMedia;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -17,6 +15,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(
             [
+                //normal seeder
                 RoleSeeder::class,
                 AdminSeeder::class,
                 UserSeeder::class,
@@ -27,7 +26,19 @@ class DatabaseSeeder extends Seeder
                 PublicServiceSeeder::class,
                 SocialMediaSeeder::class,
                 CommentSeeder::class,
-            ]
+                HomeSliderSeeder::class,
+
+                //media seeder
+                VillageLogoSeeder::class,
+                AboutUsBannerSeeder::class,
+                NewsFrontImageSeeder::class,
+                FacilityFrontImageSeeder::class,
+                PublicServiceFrontImageSeeder::class,
+                PublicServiceFileSeeder::class,
+                SocialMediaLogoSeeder::class,
+                UserPhotoProfileSeeder::class,
+                HomeSliderImageSeeder::class,
+                ]
         );
     }
 }

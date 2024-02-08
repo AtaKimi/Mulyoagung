@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\User;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Laravel\Fortify\Fortify;
@@ -11,10 +12,10 @@ use Illuminate\Cache\RateLimiting\Limit;
 use App\Actions\Fortify\ResetUserPassword;
 use App\Actions\Fortify\UpdateUserPassword;
 use Illuminate\Support\Facades\RateLimiter;
-use Laravel\Fortify\Contracts\LogoutResponse;
-use App\Actions\Fortify\UpdateUserProfileInformation;
 use Laravel\Fortify\Contracts\LoginResponse;
+use Laravel\Fortify\Contracts\LogoutResponse;
 use Laravel\Fortify\Contracts\RegisterResponse;
+use App\Actions\Fortify\UpdateUserProfileInformation;
 
 class FortifyServiceProvider extends ServiceProvider
 {
@@ -23,24 +24,32 @@ class FortifyServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        $this->app->instance(LogoutResponse::class, new class implements LogoutResponse {
+        $this->app->instance(LogoutResponse::class, new class implements LogoutResponse
+        {
             public function toResponse($request)
             {
                 return redirect('/');
             }
         });
 
-        $this->app->instance(LoginResponse::class, new class implements LoginResponse {
+        $this->app->instance(LoginResponse::class, new class implements LoginResponse
+        {
             public function toResponse($request)
             {
-                return redirect('/dashboard');
+                $user = auth()->user();
+                if ($user->hasRole('admin') || $user->hasRole('super_admin')) {
+                    return redirect()->route('dashboard');
+                }
+                // return redirect('/');
+                return redirect()->route('setting-profile');
             }
         });
 
-        $this->app->instance(RegisterResponse::class, new class implements LoginResponse {
+        $this->app->instance(RegisterResponse::class, new class implements RegisterResponse
+        {
             public function toResponse($request)
             {
-                return redirect('/dashboard');
+                return redirect('/');
             }
         });
     }
@@ -54,25 +63,23 @@ class FortifyServiceProvider extends ServiceProvider
             return view('pages.auth.login');
         });
 
-        Fortify::registerView(function() {
+        Fortify::registerView(function () {
             return view('pages.auth.register');
         });
-        
+
         Fortify::createUsersUsing(CreateNewUser::class);
-        Fortify::updateUserProfileInformationUsing(UpdateUserProfileInformation::class);
-        Fortify::updateUserPasswordsUsing(UpdateUserPassword::class);
-        Fortify::resetUserPasswordsUsing(ResetUserPassword::class);
+        // Fortify::updateUserProfileInformationUsing(UpdateUserProfileInformation::class);
+        // Fortify::updateUserPasswordsUsing(UpdateUserPassword::class);
+        // Fortify::resetUserPasswordsUsing(ResetUserPassword::class);
 
         RateLimiter::for('login', function (Request $request) {
-            $throttleKey = Str::transliterate(Str::lower($request->input(Fortify::username())).'|'.$request->ip());
+            $throttleKey = Str::transliterate(Str::lower($request->input(Fortify::username())) . '|' . $request->ip());
 
             return Limit::perMinute(5)->by($throttleKey);
         });
 
-        RateLimiter::for('two-factor', function (Request $request) {
-            return Limit::perMinute(5)->by($request->session()->get('login.id'));
-        });
-
-       
+        // RateLimiter::for('two-factor', function (Request $request) {
+        //     return Limit::perMinute(5)->by($request->session()->get('login.id'));
+        // });
     }
 }

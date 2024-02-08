@@ -9,7 +9,7 @@
 
     @include('includes.footer')
     @include('includes.scripts')
-    @slot('script')
+    @stack('script')
 </body>
 
 </html>
