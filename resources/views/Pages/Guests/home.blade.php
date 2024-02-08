@@ -50,10 +50,9 @@
         <div class="col-sm-5 col-md-4 col-lg-3 card border-0 bg-primary">
             <div class="card-body text-center fw-bold fs-5">
                 <div class="p-3 row justify-content-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="d-none d-lg-block col-md-5"
-                        fill="#FFFFFF">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="120" viewBox="0 -960 960 960" width="50">
                         <path
-                            d="M343.9 213.4L245.3 312l65.4 65.4c7.9 7.9 11.1 19.4 8.4 30.3s-10.8 19.6-21.5 22.9l-256 80c-11.4 3.5-23.8 .5-32.2-7.9S-2.1 481.8 1.5 470.5l80-256c3.3-10.7 12-18.9 22.9-21.5s22.4 .5 30.3 8.4L200 266.7l98.6-98.6c-14.3-14.6-14.2-38 .3-52.5l95.4-95.4c26.9-26.9 70.5-26.9 97.5 0s26.9 70.5 0 97.5l-95.4 95.4c-14.5 14.5-37.9 14.6-52.5 .3z" />
+                            d="M440-120v-80h320v-284q0-117-81.5-198.5T480-764q-117 0-198.5 81.5T200-484v244h-40q-33 0-56.5-23.5T80-320v-80q0-21 10.5-39.5T120-469l3-53q8-68 39.5-126t79-101q47.5-43 109-67T480-840q68 0 129 24t109 66.5Q766-707 797-649t40 126l3 52q19 9 29.5 27t10.5 38v92q0 20-10.5 38T840-249v49q0 33-23.5 56.5T760-120H440Zm-80-280q-17 0-28.5-11.5T320-440q0-17 11.5-28.5T360-480q17 0 28.5 11.5T400-440q0 17-11.5 28.5T360-400Zm240 0q-17 0-28.5-11.5T560-440q0-17 11.5-28.5T600-480q17 0 28.5 11.5T640-440q0 17-11.5 28.5T600-400Zm-359-62q-7-106 64-182t177-76q89 0 156.5 56.5T720-519q-91-1-167.5-49T435-698q-16 80-67.5 142.5T241-462Z" />
                     </svg>
                 </div>
                 <p class="text-light">Pelayanan Umum</p>
@@ -62,22 +61,20 @@
         <div class="col-sm-5 col-md-4 col-lg-3 card border-0 bg-primary">
             <div class="card-body text-center fw-bold fs-5">
                 <div class="p-3 row justify-content-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"  class="d-none d-lg-block col-md-5"
-                        fill="#FFFFFF">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="120" viewBox="0 -960 960 960" width="24">
                         <path
-                            d="M343.9 213.4L245.3 312l65.4 65.4c7.9 7.9 11.1 19.4 8.4 30.3s-10.8 19.6-21.5 22.9l-256 80c-11.4 3.5-23.8 .5-32.2-7.9S-2.1 481.8 1.5 470.5l80-256c3.3-10.7 12-18.9 22.9-21.5s22.4 .5 30.3 8.4L200 266.7l98.6-98.6c-14.3-14.6-14.2-38 .3-52.5l95.4-95.4c26.9-26.9 70.5-26.9 97.5 0s26.9 70.5 0 97.5l-95.4 95.4c-14.5 14.5-37.9 14.6-52.5 .3z" />
+                            d="M120-120v-80h80v-640h400v40h160v240h-80v-160h-80v240h-80v-280H280v560h200v80H120Zm560 40-12-60q-12-5-22.5-11T625-165l-58 20-40-69 45-40q-2-15-2-25.5t2-25.5l-45-40 40-69 58 20q10-8 20.5-14.5T668-420l12-60h80l12 60q12 5 22.5 11t20.5 14l58-20 40 69-45 40q2 15 2 25.5t-2 25.5l45 40-40 69-58-19q-10 8-20.5 14T772-140l-12 60h-80Zm40-120q33 0 56.5-23.5T800-280q0-33-23.5-56.5T720-360q-33 0-56.5 23.5T640-280q0 33 23.5 56.5T720-200ZM440-440q-17 0-28.5-11.5T400-480q0-17 11.5-28.5T440-520q17 0 28.5 11.5T480-480q0 17-11.5 28.5T440-440ZM280-200v-560 560Z" />
                     </svg>
                 </div>
-                <p class="text-light">Pembangunan Desa</p>
+                <p class="text-light">Fasilitas Desa</p>
             </div>
         </div>
         <div class="col-sm-5 col-md-4 col-lg-3 card border-0 bg-primary">
             <div class="card-body text-center fw-bold fs-5">
                 <div class="p-3 row justify-content-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"  class="d-none d-lg-block col-md-5"
-                        fill="#FFFFFF">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="120" viewBox="0 -960 960 960" width="50">
                         <path
-                            d="M343.9 213.4L245.3 312l65.4 65.4c7.9 7.9 11.1 19.4 8.4 30.3s-10.8 19.6-21.5 22.9l-256 80c-11.4 3.5-23.8 .5-32.2-7.9S-2.1 481.8 1.5 470.5l80-256c3.3-10.7 12-18.9 22.9-21.5s22.4 .5 30.3 8.4L200 266.7l98.6-98.6c-14.3-14.6-14.2-38 .3-52.5l95.4-95.4c26.9-26.9 70.5-26.9 97.5 0s26.9 70.5 0 97.5l-95.4 95.4c-14.5 14.5-37.9 14.6-52.5 .3z" />
+                            d="M480-510ZM160-160v-375l-72 55-48-64 440-336 440 336-48 63-72-54-320-244-240 183v356h200q0 21 3 41t9 39H160ZM680-40H520v-60h57q-26-27-41.5-63T520-240q0-72 45.5-127T680-436v62q-44 13-72 49.5T580-240q0 29 10.5 54t29.5 44v-58h60v160Zm80-4v-62q45-14 72.5-50.5T860-240q0-29-10.5-54T820-338v58h-60v-160h160v60h-57q26 27 41.5 63t15.5 77q0 72-45.5 127T760-44Z" />
                     </svg>
                 </div>
                 <p class="text-light">Pembangunan Desa</p>
@@ -103,54 +100,19 @@
         <div class="container">
             <h3 class="mb-3 text-primary">Berita Terakhir</h3>
             <div class="row">
+                @foreach($news as $new)
                 <div class="col-md-6 col-lg-3">
                     <div class="blog-entry">
-                        <a href="single.html" class="img-link">
-                            <img src="{{ asset('assets/images/img_1_horizontal.jpg') }}" alt="Image"
+                        <a href="{{ route('guest-news-show', $new) }}" class="img-link">
+                            <img src="{{ $new->getFirstMediaUrl('default') }}" alt="Image"
                                 class="img-fluid">
                         </a>
                         <span class="date">Apr. 14th, 2022</span>
-                        <h2><a href="single.html">Thought you loved Python? Wait until you meet Rust</a></h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <h2><a href="single.html">{{ $new->title }}</a></h2>
                         <p><a href="#" class="read-more">Continue Reading</a></p>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="blog-entry">
-                        <a href="single.html" class="img-link">
-                            <img src="{{ asset('assets/images/img_2_horizontal.jpg') }}" alt="Image"
-                                class="img-fluid">
-                        </a>
-                        <span class="date">Apr. 14th, 2022</span>
-                        <h2><a href="single.html">Startup vs corporate: What job suits you best?</a></h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <p><a href="#" class="read-more">Continue Reading</a></p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="blog-entry">
-                        <a href="single.html" class="img-link">
-                            <img src="{{ asset('assets/images/img_3_horizontal.jpg') }}" alt="Image"
-                                class="img-fluid">
-                        </a>
-                        <span class="date">Apr. 14th, 2022</span>
-                        <h2><a href="single.html">UK sees highest inflation in 30 years</a></h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <p><a href="#" class="read-more">Continue Reading</a></p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="blog-entry">
-                        <a href="single.html" class="img-link">
-                            <img src="{{ asset('assets/images/img_4_horizontal.jpg') }}" alt="Image"
-                                class="img-fluid">
-                        </a>
-                        <span class="date">Apr. 14th, 2022</span>
-                        <h2><a href="single.html">Don’t assume your user data in the cloud is safe</a></h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <p><a href="#" class="read-more">Continue Reading</a></p>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>

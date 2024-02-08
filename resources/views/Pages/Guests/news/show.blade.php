@@ -1,15 +1,16 @@
 <x-app>
     <div class="site-cover site-cover-sm same-height overlay single-page"
-        style="background-image: url('{{$news->getFirstMediaUrl('default')}}');">
+        style="background-image: url('{{ $news->getFirstMediaUrl('default') }}');">
         <div class="container">
             <div class="row same-height justify-content-center">
                 <div class="col-md-6">
                     <div class="post-entry text-center">
-                        <h1 class="mb-4">{{$news->title}}</h1>
+                        <h1 class="mb-4">{{ $news->title }}</h1>
                         <div class="post-meta align-items-center text-center">
-                            <figure class="author-figure mb-0 me-3 d-inline-block"><img src="{{$news->user->getFirstMediaUrl('default')}}"
-                                    alt="Image" class="img-fluid"></figure>
-                            <span class="d-inline-block mt-1">By {{$news->user->name}}</span>
+                            <figure class="author-figure mb-0 me-3 d-inline-block"><img
+                                    src="{{ $news->user->getFirstMediaUrl('default') }}" alt="Image"
+                                    class="img-fluid"></figure>
+                            <span class="d-inline-block mt-1">By {{ $news->user->name }}</span>
                             <span>&nbsp;-&nbsp; February 10, 2019</span>
                         </div>
                     </div>
@@ -26,20 +27,8 @@
                 <div class="col-md-12 col-lg-12 main-content">
 
                     <div class="post-content-body">
-                        <p>{!! $news->content !!}</p>
-                        <div class="row my-4">
-                            <div class="col-md-12 mb-4">
-                                <img src="{{asset('assets/images/hero_1.jpg')}}" alt="Image placeholder" class="img-fluid rounded">
-                            </div>
-                            <div class="col-md-6 mb-4">
-                                <img src="{{asset('assets/images/img_2_horizontal.jpg')}}" alt="Image placeholder"
-                                    class="img-fluid rounded">
-                            </div>
-                            <div class="col-md-6 mb-4">
-                                <img src="{{asset('assets/images/img_3_horizontal.jpg')}}" alt="Image placeholder"
-                                    class="img-fluid rounded">
-                            </div>
-                        </div>
+                        {!! $news->content !!}
+
                     </div>
 
 
@@ -54,7 +43,7 @@
                         <ul class="comment-list">
                             <li class="comment">
                                 <div class="vcard">
-                                    <img src="{{asset('assets/images/person_1.jpg')}}" alt="Image placeholder">
+                                    <img src="{{ asset('assets/images/person_1.jpg') }}" alt="Image placeholder">
                                 </div>
                                 <div class="comment-body">
                                     <h3>Jean Doe</h3>
@@ -68,7 +57,7 @@
 
                             <li class="comment">
                                 <div class="vcard">
-                                    <img src="{{asset('assets/images/person_1.jpg')}}" alt="Image placeholder">
+                                    <img src="{{ asset('assets/images/person_1.jpg') }}" alt="Image placeholder">
                                 </div>
                                 <div class="comment-body">
                                     <h3>Jean Doe</h3>
@@ -82,7 +71,8 @@
                                 <ul class="children">
                                     <li class="comment">
                                         <div class="vcard">
-                                            <img src="{{asset('assets/images/person_1.jpg')}}" alt="Image placeholder">
+                                            <img src="{{ asset('assets/images/person_1.jpg') }}"
+                                                alt="Image placeholder">
                                         </div>
                                         <div class="comment-body">
                                             <h3>Jean Doe</h3>
@@ -98,7 +88,8 @@
                                         <ul class="children">
                                             <li class="comment">
                                                 <div class="vcard">
-                                                    <img src="{{asset('assets/images/person_1.jpg')}}" alt="Image placeholder">
+                                                    <img src="{{ asset('assets/images/person_1.jpg') }}"
+                                                        alt="Image placeholder">
                                                 </div>
                                                 <div class="comment-body">
                                                     <h3>Jean Doe</h3>
@@ -113,7 +104,8 @@
                                                 <ul class="children">
                                                     <li class="comment">
                                                         <div class="vcard">
-                                                            <img src="{{asset('assets/images/person_1.jpg')}}" alt="Image placeholder">
+                                                            <img src="{{ asset('assets/images/person_1.jpg') }}"
+                                                                alt="Image placeholder">
                                                         </div>
                                                         <div class="comment-body">
                                                             <h3>Jean Doe</h3>
@@ -135,7 +127,7 @@
 
                             <li class="comment">
                                 <div class="vcard">
-                                    <img src="{{asset('assets/images/person_1.jpg')}}" alt="Image placeholder">
+                                    <img src="{{ asset('assets/images/person_1.jpg') }}" alt="Image placeholder">
                                 </div>
                                 <div class="comment-body">
                                     <h3>Jean Doe</h3>
