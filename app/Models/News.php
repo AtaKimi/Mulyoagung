@@ -12,6 +12,13 @@ class News extends Model implements HasMedia
 {
     use HasFactory, InteractsWithMedia;
 
+    protected $fillable = [
+        'title',
+        'subtitle',
+        'user_id',
+        'content',
+    ];
+
     public function comments():MorphMany {
         return $this->morphMany(Comment::class, 'commentable');
     }

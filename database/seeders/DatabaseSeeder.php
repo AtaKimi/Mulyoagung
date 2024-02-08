@@ -4,8 +4,6 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
-use App\Models\PublicService;
-use App\Models\SocialMedia;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -28,6 +26,7 @@ class DatabaseSeeder extends Seeder
                 PublicServiceSeeder::class,
                 SocialMediaSeeder::class,
                 CommentSeeder::class,
+                HomeSliderSeeder::class,
 
                 //media seeder
                 VillageLogoSeeder::class,
@@ -38,7 +37,7 @@ class DatabaseSeeder extends Seeder
                 PublicServiceFileSeeder::class,
                 SocialMediaLogoSeeder::class,
                 UserPhotoProfileSeeder::class,
-                HomePageCarauselSeeder::class,
+                HomeSliderImageSeeder::class,
                 ]
         );
     }

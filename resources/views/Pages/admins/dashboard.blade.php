@@ -104,5 +104,4 @@
         </div>
 
     </div>
-    @include('includes.admin.footer')
 </x-admin>

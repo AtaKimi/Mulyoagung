@@ -15,9 +15,15 @@ class AdminSeeder extends Seeder
     public function run(): void
     {
         $admin_role = Role::where('name', '=', 'admin')->get();
-        $user = User::factory()->create(
+        $admin = User::factory()->create(
             ['email' => 'admin@admin.com']
         );
-        $user->assignRole($admin_role);
+        $admin->assignRole($admin_role);
+
+        $super_admin_role = Role::where('name', '=', 'super_admin')->get();
+        $super_admin = User::factory()->create(
+            ['email' => 'superadmin@superadmin.com']
+        );
+        $super_admin->assignRole($super_admin_role);
     }
 }

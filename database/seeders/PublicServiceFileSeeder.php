@@ -27,7 +27,7 @@ class PublicServiceFileSeeder extends Seeder
             $img_number = fake()->numberBetween(1, 5);
             $path = "assets/seeder/files/public_service_file/" . $img_number . ".pdf";
             $public_service[$i]->addMedia(public_path($path))->preservingOriginal()
-                ->toMediaCollection('default', 'public_service_file');
+                ->toMediaCollection('files', 'public_service_file');
         }
     }
 }

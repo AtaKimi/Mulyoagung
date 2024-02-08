@@ -12,7 +12,12 @@ class PublicService extends Model implements HasMedia
 {
     use HasFactory, InteractsWithMedia;
 
-    public function comments(): MorphMany {
+    protected $fillable = [
+        'name', 'content'
+    ];
+
+    public function comments(): MorphMany
+    {
         return $this->morphMany(Comment::class, 'commentable');
     }
 }

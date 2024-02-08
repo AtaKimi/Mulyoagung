@@ -10,4 +10,10 @@ use Spatie\MediaLibrary\InteractsWithMedia;
 class Village extends Model implements HasMedia
 {
     use HasFactory, InteractsWithMedia;
+
+    protected $fillable =[
+        'email', 'phone_number', 'address', 'short_profile'
+    ];
+
+
 }

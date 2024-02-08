@@ -10,4 +10,8 @@ use Spatie\MediaLibrary\InteractsWithMedia;
 class Facility extends Model implements HasMedia
 {
     use HasFactory, InteractsWithMedia;
+
+    protected $fillable = [
+        'name', 'content'
+    ];
 }

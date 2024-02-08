@@ -21,7 +21,7 @@ class VillageFactory extends Factory
         return [
             'email' => fake()->safeEmail(),
             'address' => fake()->address(),
-            'short_profile' => $this->createContent(),
+            'short_profile' => fake()->paragraph(),
             'phone_number' => fake()->numerify('0############')
         ];
     }

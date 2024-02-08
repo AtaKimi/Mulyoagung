@@ -24,6 +24,7 @@
             <!--  Header End -->
             <div class="container-fluid">
                 {{ $slot }}
+                @include('includes.admin.footer')
             </div>
         </div>
     </div>
@@ -35,6 +36,9 @@
     <script src="{{ asset('assets/libs/apexcharts/dist/apexcharts.min.js') }}"></script>
     <script src="{{ asset('assets/libs/simplebar/dist/simplebar.js') }}"></script>
     <script src="{{ asset('assets/js/dashboard.js') }}"></script>
+    <script src="{{asset('assets/libs/ckeditor5/build/ckeditor.js')}}"></script>
+
+    @stack('script')
 </body>
 
 </html>

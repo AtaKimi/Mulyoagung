@@ -104,14 +104,17 @@ return [
             'url'    => env('APP_URL') . '/media/user_photo_profile',
         ],
 
-        'home_page_carausel_image' => [
+        'home_slider_image' => [
             'driver' => 'local',
-            'root'   => public_path('media/home_page_carausel_image'),
-            'url'    => env('APP_URL') . '/media/home_page_carausel_image',
+            'root'   => public_path('media/home_slider_image'),
+            'url'    => env('APP_URL') . '/media/home_slider_image',
         ],
 
-
-        
+        'ckeditor' => [
+            'driver' => 'local',
+            'root'   => public_path('media/ckeditor'),
+            'url'    => env('APP_URL') . '/media/ckeditor',
+        ],
     ],
 
     /*
