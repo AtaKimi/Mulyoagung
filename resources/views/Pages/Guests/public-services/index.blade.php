@@ -12,24 +12,24 @@
         <div class="container">
             <div class="row posts-entry">
                 <div class="col-12-8">
-                    @foreach ($service as $publicService)
+                    @foreach ($publicServices as $publicService)
                         <div class="blog-entry d-flex blog-entry-search-item">
                             <div class="container">
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <a href="{{ route('guest-public-service-show', ['id' => $publicService->id]) }}"
-                                            class="img-link me-4">
-                                            <img src="{{ asset('assets/images/img_1_sq.jpg') }}" alt="Image"
-                                                class="img-fluid">
+                                <div class="row align-items-center">
+                                    <div class="col-md-4">
+                                        <a href="{{ route('guest-public-service-show', $publicService) }}"
+                                            class="img-link me-1">
+                                            <img src="{{ $publicService->getFirstMediaUrl('default') }}" alt="Image"
+                                                class="img-fluid" style="width: fit-content">
                                         </a>
                                     </div>
-                                    <div class="col-md-9">
+                                    <div class="col-md-8">
                                         <span class="date">Apr. 14th, 2022 &bullet; <a
                                                 href="#">Business</a></span>
                                         <h2><a
-                                                href="{{ route('guest-public-service-show', ['id' => $publicService->id]) }}">{{ $publicService->name }}</a>
+                                                href="{{ route('guest-public-service-show', $publicService) }}">{{ $publicService->name }}</a>
                                         </h2>
-                                        <p><a href="{{ route('guest-public-service-show', ['id' => $publicService->id]) }}"
+                                        <p><a href="{{ route('guest-public-service-show', $publicService) }}"
                                                 class="btn btn-sm btn-outline-primary">Read More</a></p>
                                     </div>
                                 </div>
@@ -38,18 +38,7 @@
                         </div>
                     @endforeach
 
-                    <div class="row text-start pt-5 border-top">
-                        <div class="col-md-12">
-                            <div class="custom-pagination">
-                                <span>1</span>
-                                <a href="#">2</a>
-                                <a href="#">3</a>
-                                <a href="#">4</a>
-                                <span>...</span>
-                                <a href="#">15</a>
-                            </div>
-                        </div>
-                    </div>
+                    <x-pagination.bootstrap :paginator="$publicServices" />
 
                 </div>
             </div>
