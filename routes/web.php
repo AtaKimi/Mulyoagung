@@ -55,7 +55,7 @@ Route::controller(FacilityController::class)->group(
 Route::controller(PublicServiceController::class)->group(
     function () {
         Route::get('/layanan-umum', 'index')->name('guest-public-service-index');
-        Route::get('/layanan-umum/{public_service}', 'show')->name('guest-public-service-show');
+        Route::get('/layanan-umum/{publicService}', 'show')->name('guest-public-service-show');
     }
 );
 

@@ -16,22 +16,19 @@
                     @foreach ($news as $new)
                         <div class="blog-entry d-flex blog-entry-search-item">
                             <div class="container">
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <a href="{{ route('guest-news-show', ['id' => $new->id]) }}"
-                                            class="img-link me-4">
-                                            <img src="{{ asset('assets/images/img_1_sq.jpg') }}" alt="Image"
-                                                class="img-fluid">
+                                <div class="row align-items-center">
+                                    <div class="col-md-4">
+                                        <a href="{{ route('guest-news-show', $new) }}" class="img-link me-4">
+                                            <img src="{{ $new->getFirstMediaUrl('default') }}" alt="Image"
+                                                class="img-fluid" style="width: fit-content">
                                         </a>
                                     </div>
-                                    <div class="col-md-9">
-                                        <span class="date">Apr. 15th, 2022 &bullet; <a
-                                                href="#">Business</a></span>
-                                        <h2><a
-                                                href="{{ route('guest-news-show', ['id' => $new->id]) }}">{{ $new->title }}</a>
+                                    <div class="col-md-8">
+                                        <span class="date">{{ $new->created_at->format('F d, Y') }} </span>
+                                        <h2><a href="{{ route('guest-news-show', $new) }}">{{ $new->title }}</a>
                                         </h2>
                                         <p>{{ $new->subtitle }}</p>
-                                        <p><a href="{{ route('guest-news-show', ['id' => $new->id]) }}"
+                                        <p><a href="{{ route('guest-news-show', $new) }}"
                                                 class="btn btn-sm btn-outline-primary">Read More</a></p>
                                     </div>
                                 </div>
@@ -40,19 +37,7 @@
                         </div>
                     @endforeach
 
-                    <div class="row text-start pt-5 border-top">
-                        <div class="col-md-12">
-                            <div class="custom-pagination">
-                                <span>1</span>
-                                <a href="#">2</a>
-                                <a href="#">3</a>
-                                <a href="#">4</a>
-                                <span>...</span>
-                                <a href="#">15</a>
-                            </div>
-                        </div>
-                    </div>
-
+                    <x-pagination.bootstrap :paginator="$news" />
                 </div>
             </div>
         </div>
