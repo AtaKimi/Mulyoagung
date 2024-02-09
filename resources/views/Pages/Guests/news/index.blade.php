@@ -18,17 +18,14 @@
                             <div class="container">
                                 <div class="row align-items-center">
                                     <div class="col-md-4">
-                                        <a href="{{ route('guest-news-show', $new) }}"
-                                            class="img-link me-4">
+                                        <a href="{{ route('guest-news-show', $new) }}" class="img-link me-4">
                                             <img src="{{ $new->getFirstMediaUrl('default') }}" alt="Image"
                                                 class="img-fluid" style="width: fit-content">
                                         </a>
                                     </div>
                                     <div class="col-md-8">
-                                        <span class="date">Apr. 15th, 2022 &bullet; <a
-                                                href="#">Business</a></span>
-                                        <h2><a
-                                                href="{{ route('guest-news-show', $new) }}">{{ $new->title }}</a>
+                                        <span class="date">{{ $new->created_at->format('F d, Y') }} </span>
+                                        <h2><a href="{{ route('guest-news-show', $new) }}">{{ $new->title }}</a>
                                         </h2>
                                         <p>{{ $new->subtitle }}</p>
                                         <p><a href="{{ route('guest-news-show', $new) }}"

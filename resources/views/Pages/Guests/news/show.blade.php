@@ -11,7 +11,7 @@
                                     src="{{ $news->user->getFirstMediaUrl('default') }}" alt="Image"
                                     class="img-fluid"></figure>
                             <span class="d-inline-block mt-1">By {{ $news->user->name }}</span>
-                            <span>&nbsp;-&nbsp; February 10, 2019</span>
+                            <span>&nbsp;-&nbsp; {{ $news->created_at->format('F d, Y') }}</span>
                         </div>
                     </div>
                 </div>

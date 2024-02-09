@@ -4,6 +4,7 @@ namespace App\Http\Controllers\guests;
 
 use App\Http\Controllers\Controller;
 use App\Models\Facility;
+use App\Models\HomeSlider;
 use App\Models\News;
 use App\Models\PublicService;
 use Illuminate\Http\Request;
@@ -16,7 +17,10 @@ class HomeController extends Controller
         $facilities = Facility::latest()->take(3)->get();
         $publicServices = PublicService::latest()->take(3)->get();
 
+        $home_slider = HomeSlider::get();
 
-        return view('pages.guests.home', compact('news', 'facilities', 'publicServices'));
+
+
+        return view('pages.guests.home', compact('news', 'facilities', 'publicServices','home_slider'));
     }
 }

@@ -24,8 +24,7 @@
                                         </a>
                                     </div>
                                     <div class="col-md-8">
-                                        <span class="date">Apr. 14th, 2022 &bullet; <a
-                                                href="#">Business</a></span>
+                                        <span class="date">{{$publicService->created_at->format('F d, Y')}}</span>
                                         <h2><a
                                                 href="{{ route('guest-public-service-show', $publicService) }}">{{ $publicService->name }}</a>
                                         </h2>
