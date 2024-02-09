@@ -78,7 +78,7 @@
                                     <div class="text">
                                         <h4>{{$new->title}}</h4>
                                         <div class="post-meta">
-                                            <span class="mr-2">March 15, 2018 </span>
+                                            <span class="mr-2">{{$new->created_at->format('F d, Y')}} </span>
                                         </div>
                                     </div>
                                 </a>

@@ -10,27 +10,15 @@
                 aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="{{ asset('assets/images/hero_1.jpg') }}" class="d-block w-100" height="400" alt="...">
+            @foreach($home_slider as $slider)
+            <div class="carousel-item @if($loop->index == 0) active     @endif">
+                <img src="{{ $slider->getFirstMediaUrl('default') }}" class="d-block w-100" height="400" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>First slide label</h5>
-                    <p>Some representative placeholder content for the first slide.</p>
+                    <h5>{{$slider->title}}</h5>
+                    <p>{{$slider->subtitle}}</p>
                 </div>
             </div>
-            <div class="carousel-item">
-                <img src="{{ asset('assets/images/hero_2.jpg') }}" class="d-block w-100" height="400" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Second slide label</h5>
-                    <p>Some representative placeholder content for the second slide.</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="{{ asset('assets/images/hero_3.jpg') }}" class="d-block w-100" height="400" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Third slide label</h5>
-                    <p>Some representative placeholder content for the third slide.</p>
-                </div>
-            </div>
+            @endforeach
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
             data-bs-slide="prev">
@@ -100,18 +88,17 @@
         <div class="container">
             <h3 class="mb-3 text-primary">Berita Terakhir</h3>
             <div class="row">
-                @foreach($news as $new)
-                <div class="col-md-6 col-lg-3">
-                    <div class="blog-entry">
-                        <a href="{{ route('guest-news-show', $new) }}" class="img-link">
-                            <img src="{{ $new->getFirstMediaUrl('default') }}" alt="Image"
-                                class="img-fluid">
-                        </a>
-                        <span class="date">Apr. 14th, 2022</span>
-                        <h2><a href="single.html">{{ $new->title }}</a></h2>
-                        <p><a href="#" class="read-more">Continue Reading</a></p>
+                @foreach ($news as $new)
+                    <div class="col-md-6 col-lg-3">
+                        <div class="blog-entry">
+                            <a href="{{ route('guest-news-show', $new) }}" class="img-link">
+                                <img src="{{ $new->getFirstMediaUrl('default') }}" alt="Image" class="img-fluid">
+                            </a>
+                            <span class="date">{{ $new->created_at->format('F d, Y') }}</span>
+                            <h2><a href="single.html">{{ $new->title }}</a></h2>
+                            <p><a href="#" class="read-more">Continue Reading</a></p>
+                        </div>
                     </div>
-                </div>
                 @endforeach
             </div>
         </div>
