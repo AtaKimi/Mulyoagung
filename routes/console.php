@@ -1,6 +1,10 @@
 <?php
 
+use Carbon\Carbon;
+use App\Models\News;
 use App\Models\User;
+use App\Models\Facility;
+use App\Models\HomeSlider;
 use Spatie\Permission\Models\Role;
 use Illuminate\Foundation\Inspiring;
 use Illuminate\Support\Facades\Artisan;
@@ -17,7 +21,7 @@ use Illuminate\Support\Facades\Artisan;
 */
 
 Artisan::command('inspire', function () {
-    $admin_role = Role::create(['name' => 'admin']);
-    $role = Role::where('name', '=', 'admin')->get();
-    dd($role);
+    $news = News::get()->first();
+    dd($news->created_at->format('F d, Y'));
+
 })->purpose('Display an inspiring quote');

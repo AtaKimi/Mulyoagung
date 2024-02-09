@@ -9,12 +9,11 @@ use Illuminate\Http\Request;
 class FacilityController extends Controller
 {
     public function index(){
-        $facilities = Facility::all();
+        $facilities = Facility::paginate(10);
         return view('pages.guests.facilities.index', compact('facilities'));
     }
 
-    public function show() {
-        $facilities = Facility::where('id' , request('id'))->first();
-        return view('pages.guests.facilities.show', compact('facilities'));
+    public function show(Facility $facility) {
+        return view('pages.guests.facilities.show', compact('facility'));
     }
 }

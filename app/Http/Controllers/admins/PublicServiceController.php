@@ -68,7 +68,7 @@ class PublicServiceController extends Controller
     public function fileStore(PublicService $public_service)
     {
         $validated = request()->validate([
-            'file' => 'required|mimes:png,jpg,pdf,docs,doc,xls'
+            'file' => 'required|mimes:png,jpg,pdf,docx,doc,xls, xlxs'
         ]);
 
         $public_service->addMediaFromRequest('file')->toMediaCollection('files', 'public_service_file');

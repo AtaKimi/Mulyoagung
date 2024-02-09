@@ -1,11 +1,11 @@
 <x-app>
     <div class="site-cover site-cover-sm same-height overlay single-page"
-        style="background-image: url('{{asset('assets/images/hero_5.jpg')}}');">
+        style="background-image: url('{{$facility->getFirstMediaUrl('default')}}');">
         <div class="container">
             <div class="row same-height justify-content-center">
                 <div class="col-md-6">
                     <div class="post-entry text-center">
-                        <h1 class="mb-4">{{$facilities->name}}</h1>
+                        <h1 class="mb-4">{{$facility->name}}</h1>
                         <div class="post-meta align-items-center text-center">
                             <figure class="author-figure mb-0 me-3 d-inline-block"><img src="images/person_1.jpg"
                                     alt="Image" class="img-fluid"></figure>
@@ -26,7 +26,7 @@
                 <div class="col-md-12 col-lg-12 main-content">
 
                     <div class="post-content-body">
-                        <p>{!! $facilities->content !!}</p>
+                        <p>{!! $facility->content !!}</p>
                         <div class="row my-4">
                             <div class="col-md-12 mb-4">
                                 <img src="{{asset('assets/images/hero_1.jpg')}}" alt="Image placeholder" class="img-fluid rounded">

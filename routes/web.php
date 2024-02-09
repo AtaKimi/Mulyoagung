@@ -41,26 +41,25 @@ Route::controller(AboutUsController::class)->group(
 Route::controller(NewsController::class)->group(
     function () {
         Route::get('/berita', 'index')->name('guest-news-index');
-        Route::get('/berita/{id}', 'show')->name('guest-news-show');
+        Route::get('/berita/{news}', 'show')->name('guest-news-show');
     }
 );
 
 Route::controller(FacilityController::class)->group(
     function () {
         Route::get('/fasilitsas', 'index')->name('guest-facility-index');
-        Route::get('/fasilitsas/{id}', 'show')->name('guest-facility-show');
+        Route::get('/fasilitsas/{facility}', 'show')->name('guest-facility-show');
     }
 );
 
 Route::controller(PublicServiceController::class)->group(
     function () {
         Route::get('/layanan-umum', 'index')->name('guest-public-service-index');
-        Route::get('/layanan-umum/{id}', 'show')->name('guest-public-service-show');
+        Route::get('/layanan-umum/{public_service}', 'show')->name('guest-public-service-show');
     }
 );
 
-Route::middleware(['auth'])->group(function () {
-
+Route::middleware(['auth'])->group(function () { 
     Route::middleware('role:admin|super_admin')->group(function () {
         Route::controller(DashboardController::class)->group(
             function () {
