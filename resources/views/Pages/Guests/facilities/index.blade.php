@@ -20,6 +20,6 @@
             @endforeach
         </div>
 
-        <x-pagination.guest :paginator="$facilities" />
+        <x-pagination.bootstrap :paginator="$facilities" />
     </div>
 </x-app>
