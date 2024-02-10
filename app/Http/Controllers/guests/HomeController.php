@@ -14,7 +14,7 @@ class HomeController extends Controller
     public function index(){
 
         $news = News::latest()->take(4)->get();
-        $facilities = Facility::latest()->take(3)->get();
+        $facilities = Facility::latest()->take(4)->get();
         $publicServices = PublicService::latest()->take(3)->get();
 
         $home_slider = HomeSlider::get();
