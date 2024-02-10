@@ -15,6 +15,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 
+    <link rel="stylesheet" href="{{ asset('assets/css/facility.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/tiny-slider.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/aos.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/glightbox.min.css') }}">
