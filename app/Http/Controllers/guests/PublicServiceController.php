@@ -13,7 +13,7 @@ class PublicServiceController extends Controller
         return view('pages.guests.public-services.index', compact('publicServices'));
     }
 
-    public function show(PublicService $publicService){
-        return view('pages.guests.public-services.show', compact('publicService'));
+    public function show(PublicService $public_service){
+        return view('pages.guests.public-services.show', compact('public_service'));
     }
 }

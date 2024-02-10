@@ -3,7 +3,6 @@
 namespace Database\Factories;
 
 use App\Models\User;
-use App\Traits\HtmlFactoryHelper;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -11,7 +10,6 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class CommentFactory extends Factory
 {
-    use HtmlFactoryHelper;
     /**
      * Define the model's default state.
      *
@@ -21,7 +19,7 @@ class CommentFactory extends Factory
     {
         return [
             'user_id' => User::get()->random(),
-            'content' => $this->createContent(),
+            'content' => fake()->paragraph(),
         ];
     }
 }

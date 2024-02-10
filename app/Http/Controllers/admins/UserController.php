@@ -46,27 +46,25 @@ class UserController extends Controller
             'role' => 'required|integer'
         ]);
 
+        if ($user->hasRole('super_admin')) {
+            return redirect()->back();
+        }
+
         if ($validated['role'] == 1) {
             if ($user->hasRole('admin')) {
                 $admin_role = Role::where('name', '=', 'admin')->first();
                 $user->removeRole($admin_role);
             }
-            if ($user->hasRole('super_admin')) {
-                $super_admin_role = Role::where('name', '=', 'super_admin')->first();
-                $user->removeRole($super_admin_role);
-            }
         } else if ($validated['role'] == 2) {
             $admin_role = Role::where('name', '=', 'admin')->first();
             $user->syncRoles($admin_role);
-        } else if ($validated['role'] == 3) {
-            $super_admin_role = Role::where('name', '=', 'super_admin')->first();
-            $user->syncRoles($super_admin_role);
         }
 
         return redirect()->back();
     }
 
-    public function destroy(User $user){
+    public function destroy(User $user)
+    {
         $user->delete();
 
         return redirect()->back();

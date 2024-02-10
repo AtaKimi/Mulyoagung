@@ -38,6 +38,7 @@ class DatabaseSeeder extends Seeder
                 SocialMediaLogoSeeder::class,
                 UserPhotoProfileSeeder::class,
                 HomeSliderImageSeeder::class,
+                CkEditorSeeder::class,
                 ]
         );
     }

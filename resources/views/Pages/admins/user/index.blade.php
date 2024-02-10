@@ -25,9 +25,15 @@
                                 <form action="{{ route('admin-user-update', $user) }}" method="POST">
                                     @csrf
                                     <select class="form-select" onchange="this.closest('form').submit()" name="role">
+                                        @if ($user->hasRole('super_admin'))
+                                        <option value="3" selected>
+                                            Super Admin
+                                        </option>
+                                    @else
                                         <option value="1">Guest</option>
-                                        <option value="2" @if ($user->hasRole('admin')) selected @endif>Admin</option>
-                                        <option value="3" @if ($user->hasRole('super_admin')) selected @endif>Super Admin
+                                        <option value="2" @if ($user->hasRole('admin')) selected @endif>Admin
+                                        </option>
+                                    @endif
                                     </select>
                                 </form>
                             </td>
@@ -73,8 +79,6 @@
                             <select class="form-select" name="role">
                                 <option value="1">Guest</option>
                                 <option value="2" @if ($user->hasRole('admin')) selected @endif>Admin</option>
-                                <option value="3" @if ($user->hasRole('super_admin')) selected @endif>Super Admin
-                                </option>
                             </select>
                             @error('role')
                                 <div class="alert alert-danger mt-1" role="alert">

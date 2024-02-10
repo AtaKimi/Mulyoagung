@@ -5,6 +5,12 @@
                 <a class="nav-link sidebartoggler nav-icon-hover" id="headerCollapse" href="javascript:void(0)">
                     <i class="ti ti-menu-2"></i>
                 </a>
+
+            </li>
+            <li class="nav-item ">
+                <a href="{{ route('home') }}" class="py-2 btn btn-primary">
+                    Halaman Utama
+                </a>
             </li>
         </ul>
         <div class="navbar-collapse justify-content-end px-0" id="navbarNav">

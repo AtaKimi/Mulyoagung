@@ -8,6 +8,7 @@ use App\Http\Controllers\admins\PublicServiceController as AdminPublicServiceCon
 use App\Http\Controllers\admins\SettingController as AdminSettingController;
 use App\Http\Controllers\admins\UserController as AdminUserController;
 use App\Http\Controllers\guests\AboutUsController;
+use App\Http\Controllers\guests\CommentController;
 use App\Http\Controllers\guests\FacilityController;
 use App\Http\Controllers\guests\HomeController;
 use App\Http\Controllers\guests\NewsController;
@@ -55,11 +56,11 @@ Route::controller(FacilityController::class)->group(
 Route::controller(PublicServiceController::class)->group(
     function () {
         Route::get('/layanan-umum', 'index')->name('guest-public-service-index');
-        Route::get('/layanan-umum/{publicService}', 'show')->name('guest-public-service-show');
+        Route::get('/layanan-umum/{public_service}', 'show')->name('guest-public-service-show');
     }
 );
 
-Route::middleware(['auth'])->group(function () { 
+Route::middleware(['auth'])->group(function () {
     Route::middleware('role:admin|super_admin')->group(function () {
         Route::controller(DashboardController::class)->group(
             function () {
@@ -74,11 +75,13 @@ Route::middleware(['auth'])->group(function () {
                 Route::post('/about-us/update', 'update')->name('admin-about-us-update');
             });
 
-            Route::prefix('users')->controller(AdminUserController::class)->group(function () {
-                Route::get('/', 'index')->name('admin-user-index');
-                Route::post('/store', 'store')->name('admin-user-store');
-                Route::post('/{user}/update', 'update')->name('admin-user-update');
-                Route::delete('/{user}/destroy', 'destroy')->name('admin-user-destroy');
+            Route::middleware('role:super_admin')->group(function () {
+                Route::prefix('users')->controller(AdminUserController::class)->group(function () {
+                    Route::get('/', 'index')->name('admin-user-index');
+                    Route::post('/store', 'store')->name('admin-user-store');
+                    Route::post('/{user}/update', 'update')->name('admin-user-update');
+                    Route::delete('/{user}/destroy', 'destroy')->name('admin-user-destroy');
+                });
             });
 
             Route::prefix('news')->controller(AdminNewsController::class)->group(function () {
@@ -128,6 +131,11 @@ Route::middleware(['auth'])->group(function () {
         Route::post('/profile/identity', 'profileIdentity')->name('setting-profile-indentity');
         Route::post('/profile/photo', 'profilePhoto')->name('setting-profile-photo');
         Route::post('profile/change-password', 'changePassword')->name('setting-profile-change-password');
+    });
+
+    Route::prefix('comment')->controller(CommentController::class)->group(function () {
+        Route::post('news/{news}', 'news')->name('comment-news');
+        Route::post('public_service/{public_service}', 'publicService')->name('comment-public-service');
     });
 });
 
