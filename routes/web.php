@@ -141,4 +141,5 @@ Route::middleware(['auth'])->group(function () {
 
 Route::controller(MediaController::class)->group(function () {
     Route::post('ckeditor', 'ckeditor')->name('ckeditor');
+    ROute::get('download/{media}', 'download')->name('download');
 });

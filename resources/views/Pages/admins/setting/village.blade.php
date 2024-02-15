@@ -143,8 +143,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="home_slider" class="form-label">Image</label>
-                            <input type="file" name="home_slider" class="col form-control"
-                                onchange="this.closest('form').submit()">
+                            <input type="file" name="home_slider" class="col form-control">
                             @error('home_slider')
                                 <div class="col alert alert-danger mt-1" role="alert">
                                     {{ $message }}

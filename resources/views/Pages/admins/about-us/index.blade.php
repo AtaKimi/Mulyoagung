@@ -5,7 +5,7 @@
                 <h4>Tentang Kami</h4>
                 <a href="{{route('admin-about-us-edit')}}" class="btn btn-outline-primary">Edit</a>
             </div>
-            <div class="containter ck-content">
+            <div class="containter ck ck-content ck-editor">
                 {!! $about_us->content !!}
             </div>
         </div>

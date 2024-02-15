@@ -23,6 +23,7 @@ class DeploymentSeeder extends Seeder
                 CkEditorSeeder::class,
                 VillageLogoSeeder::class,
                 UserPhotoProfileSeeder::class,
+                AboutUsBannerSeeder::class,
             ]
         );
     }

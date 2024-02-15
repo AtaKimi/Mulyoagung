@@ -86,9 +86,10 @@
                         <tr>
                             <th scope="row"> {{ $loop->index + 1 }}
                             <td>{{ $file->file_name }}</td>
-                                
+
                             <td>
-                                <form action="{{ route('admin-public-service-file-destroy', [$public_service, $file]) }}"
+                                <form
+                                    action="{{ route('admin-public-service-file-destroy', [$public_service, $file]) }}"
                                     method="post">
                                     @csrf
                                     @method('DELETE')
@@ -107,7 +108,7 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah File</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <form action="{{ route('admin-public-service-file-store', $public_service) }}" method="POST"
@@ -116,8 +117,7 @@
                     <div class="modal-body">
                         <div class="mb-3">
                             <label for="file" class="form-label">File</label>
-                            <input type="file" name="file" class="col form-control"
-                                onchange="this.closest('form').submit()">
+                            <input type="file" name="file" class="col form-control">
                             @error('file')
                                 <div class="col alert alert-danger mt-1" role="alert">
                                     {{ $message }}

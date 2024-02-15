@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Village;
 use Illuminate\Http\Request;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 class MediaController extends Controller
 {
@@ -18,5 +19,9 @@ class MediaController extends Controller
             $media = $village->addMediaFromRequest('upload')->toMediaCollection('ckeditor', 'ckeditor');
             return response()->json(['fileName' => $media->file_name, 'uploaded' => 1, 'url' => $media->getUrl()]);
         }
+    }
+
+    public function download(Media $media){
+        return $media;
     }
 }

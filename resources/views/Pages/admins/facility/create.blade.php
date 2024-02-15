@@ -26,7 +26,7 @@
 <x-admin>
     <div class="card">
         <div class="card-body">
-            <h4 class="mb-4">News Form</h4>
+            <h4 class="mb-4">Facility Form</h4>
             <form action="{{ route('admin-facility-store') }}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
